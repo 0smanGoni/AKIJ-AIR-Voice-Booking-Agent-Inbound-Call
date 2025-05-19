@@ -1,0 +1,10 @@
+{
+    "trunk": {
+        "name": "LiveKit-RTC-Dispatch-Trunk",
+        "allowed_addresses": [
+            ""
+        ],
+        "numbers": [""],
+        "krisp_enabled": true
+    }
+}
