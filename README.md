@@ -31,7 +31,7 @@ Make sure you have the following installed and ready:
 
 ### 🚀 Setup Instructions
 1. Clone the Repository
-git clone https://github.com/your-username/akij-air-voice-agent.git
+git clone https://github.com/0smanGoni/AKIJ-AIR-Voice-Booking-Agent-Inbound-Call.git
 cd akij-air-voice-agent
 
 2. Create a Virtual Environment
