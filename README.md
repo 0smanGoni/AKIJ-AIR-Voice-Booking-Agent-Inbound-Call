@@ -1,7 +1,7 @@
-AKIJ AIR Voice Booking Agent
+# AKIJ AIR Voice Booking Agent
 This project is a Python-based voice agent for AKIJ AIR, designed to handle inbound calls and assist users with flight bookings using LiveKit. It includes features like turn detection, function calling, usage logging, and Krisp noise cancellation for a professional voice interaction experience.
 
-✨ Features
+## ✨ Features
 
 Voice Interaction: Engage users with natural, voice-based flight booking assistance.
 Language Support: Supports English and Bangla with DTMF-based language selection.
@@ -10,50 +10,50 @@ Background Audio: Plays a "thinking" sound during processing for a better user e
 Modular Agents: Handles tasks like flight search, passenger details, and booking confirmation separately for better maintainability.
 
 
-🔧 Prerequisites
+## 🔧 Prerequisites
 Make sure you have the following installed and ready:
 
-Python 3.11 or higher
-Git
-LiveKit CLI (optional, for SIP and inbound call configuration)
-Code editor (e.g., VS Code)
-API access for:
-OpenAI
-Deepgram
-ElevenLabs
-AssemblyAI
-DeepSeek
-LangSmith (optional)
+- Python 3.11 or higher
+- Git
+- LiveKit CLI (optional, for SIP and inbound call configuration)
+- Code editor (e.g., VS Code)
+- API access for:
+- OpenAI
+- Deepgram
+- ElevenLabs
+- AssemblyAI
+- DeepSeek
+- LangSmith (optional)
 
 
-A Twilio account (or similar) for inbound call support
+## A Twilio account (or similar) for inbound call support
 
 
-🚀 Setup Instructions
-1. Clone the Repository
+### 🚀 Setup Instructions
+- 1. Clone the Repository
 git clone https://github.com/your-username/akij-air-voice-agent.git
 cd akij-air-voice-agent
 
-2. Create a Virtual Environment
+- 2. Create a Virtual Environment
 Set up a virtual environment to manage dependencies.
 Linux/macOS
 python3 -m venv myenv
 source myenv/bin/activate
 
-Windows
+- Windows
 python3.11 -m venv myenv
 myenv\Scripts\activate.bat
 
-3. Install Dependencies
+- 3. Install Dependencies
 Install the required Python packages:
 pip install -r requirements.txt
 
-4. Download Required Files
+- 4. Download Required Files
 Download necessary data files (e.g., thinking.wav):
 python agent.py download-files
 
 
-🔑 Configuration
+## 🔑 Configuration
 Configure the environment by setting up API keys and URLs.
 
 Create the .env File:
@@ -64,7 +64,7 @@ cp .env.example .env
 Edit the .env File:
 Add your API keys and configuration:
 # API Keys
-API_KEY=your_api_key
+- API_KEY=your_api_key
 SECRET_CODE=your_secret_code
 OPENAI_API_KEY=your_openai_key
 DEEPSEEK_API_KEY=your_deepseek_key
