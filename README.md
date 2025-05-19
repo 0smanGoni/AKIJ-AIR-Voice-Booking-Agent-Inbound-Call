@@ -30,25 +30,25 @@ Make sure you have the following installed and ready:
 
 
 ### 🚀 Setup Instructions
-- 1. Clone the Repository
+1. Clone the Repository
 git clone https://github.com/your-username/akij-air-voice-agent.git
 cd akij-air-voice-agent
 
-- 2. Create a Virtual Environment
+2. Create a Virtual Environment
 Set up a virtual environment to manage dependencies.
 Linux/macOS
 python3 -m venv myenv
 source myenv/bin/activate
 
-- Windows
+Windows
 python3.11 -m venv myenv
 myenv\Scripts\activate.bat
 
-- 3. Install Dependencies
+3. Install Dependencies
 Install the required Python packages:
 pip install -r requirements.txt
 
-- 4. Download Required Files
+4. Download Required Files
 Download necessary data files (e.g., thinking.wav):
 python agent.py download-files
 
@@ -65,23 +65,23 @@ Edit the .env File:
 Add your API keys and configuration:
 # API Keys
 - API_KEY=your_api_key
-SECRET_CODE=your_secret_code
-OPENAI_API_KEY=your_openai_key
-DEEPSEEK_API_KEY=your_deepseek_key
-LANGSMITH_API_KEY=your_langsmith_key
-ASSEMBLYAI_API_KEY=your_assemblyai_key
-DEEPGRAM_API_KEY=your_deepgram_key
-ELEVEN_API_KEY=your_elevenlabs_key
+- SECRET_CODE=your_secret_code
+- OPENAI_API_KEY=your_openai_key
+- DEEPSEEK_API_KEY=your_deepseek_key
+- LANGSMITH_API_KEY=your_langsmith_key
+- ASSEMBLYAI_API_KEY=your_assemblyai_key
+- DEEPGRAM_API_KEY=your_deepgram_key
+- ELEVEN_API_KEY=your_elevenlabs_key
 
 # API URLs
-FLIGHT_API_URL=https://serviceapi.innotraveltech.com/flight/search
-DEEPSEEK_API_URL=https://api.deepseek.com/v1/chat/completions
-BASE_URL=https://serviceapi.innotraveltech.com/flight/validate
+- FLIGHT_API_URL=https://serviceapi.innotraveltech.com/flight/search
+- DEEPSEEK_API_URL=https://api.deepseek.com/v1/chat/completions
+- BASE_URL=https://serviceapi.innotraveltech.com/flight/validate
 
 # LiveKit Configuration
-LIVEKIT_API_KEY=your_livekit_api_key
-LIVEKIT_API_SECRET=your_livekit_api_secret
-LIVEKIT_URL=wss://akij-inbound-flight-agent-rybk7ozs.livekit.cloud
+- LIVEKIT_API_KEY=your_livekit_api_key
+- LIVEKIT_API_SECRET=your_livekit_api_secret
+- LIVEKIT_URL=wss://akij-inbound-flight-agent-rybk7ozs.livekit.cloud
 
 
 Optional: Use LiveKit CLI:
@@ -91,7 +91,7 @@ lk app env
 
 
 
-🏃 Running the Agent
+## 🏃 Running the Agent
 Start the voice agent in development mode:
 python agent.py dev
 
@@ -102,7 +102,7 @@ Prompt for language selection (Bangla: press 1, English: press 2).
 Handle flight booking tasks via voice interaction.
 
 
-📞 Enabling Inbound Calls
+## 📞 Enabling Inbound Calls
 To enable inbound calls using Twilio, configure a SIP trunk and dispatch rule with LiveKit Cloud.
 1. Install LiveKit CLI
 brew update && brew install livekit-cli
@@ -127,20 +127,8 @@ Associate the phone number with the SIP trunk in your SIP provider’s dashboard
 7. Test Inbound Calls
 Dial the phone number to interact with the voice agent.
 
-📂 Project Structure
-akij-air-voice-agent/
-├── agent.py               # Main voice agent script
-├── .env                   # Environment variables (not tracked)
-├── .gitignore             # Git ignore file
-├── requirements.txt       # Python dependencies
-├── data/                  # JSON files for flight and passenger data
-├── inbound-trunk.json     # SIP trunk configuration
-├── dispatch-rule.json     # Dispatch rule configuration
-├── run.txt                # Setup and run commands
-└── README.md              # Project documentation
 
-
-🛠️ Troubleshooting
+## 🛠️ Troubleshooting
 
 API Key Errors: Ensure all keys in .env are valid.
 Dependency Issues: Verify Python 3.11+ is used and re-run pip install -r requirements.txt.
@@ -149,7 +137,7 @@ SIP Trunk Errors: Check inbound-trunk.json for correct IP addresses and re-run C
 Logs: Review console output or logs/ directory for errors.
 
 
-🤝 Contributing
+## 🤝 Contributing
 We welcome contributions! To contribute:
 
 Fork the repository.
