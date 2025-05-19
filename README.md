@@ -31,35 +31,42 @@ Make sure you have the following installed and ready:
 
 ### 🚀 Setup Instructions
 1. Clone the Repository
+```console
 git clone https://github.com/0smanGoni/AKIJ-AIR-Voice-Booking-Agent-Inbound-Call.git
 cd akij-air-voice-agent
+```
 
 2. Create a Virtual Environment
 Set up a virtual environment to manage dependencies.
 Linux/macOS
+```console
 python3 -m venv myenv
 source myenv/bin/activate
-
+```
 Windows
+```console
 python3.11 -m venv myenv
 myenv\Scripts\activate.bat
-
+```
 3. Install Dependencies
 Install the required Python packages:
+```console
 pip install -r requirements.txt
-
+```
 4. Download Required Files
 Download necessary data files (e.g., thinking.wav):
+```console
 python agent.py download-files
-
+```
 
 ## 🔑 Configuration
 Configure the environment by setting up API keys and URLs.
 
 Create the .env File:
 Copy the .env.example (if provided) to .env:
+```console
 cp .env.example .env
-
+```
 
 Edit the .env File:
 Add your API keys and configuration:
@@ -86,14 +93,17 @@ Add your API keys and configuration:
 
 Optional: Use LiveKit CLI:
 Alternatively, configure the environment using:
+```console
 lk app env
-
+```
 
 
 
 ## 🏃 Running the Agent
 Start the voice agent in development mode:
+```console
 python agent.py dev
+```
 
 The agent will:
 
@@ -105,22 +115,27 @@ Handle flight booking tasks via voice interaction.
 ## 📞 Enabling Inbound Calls
 To enable inbound calls using Twilio, configure a SIP trunk and dispatch rule with LiveKit Cloud.
 1. Install LiveKit CLI
+```console
 brew update && brew install livekit-cli
-
+```
 2. Authenticate with LiveKit Cloud
+```console
 lk cloud auth
-
+```
 Follow the browser instructions to log in.
 3. Obtain a Phone Number
 Get a phone number from Twilio or another SIP provider.
 4. Create a SIP Trunk
 Edit inbound-trunk.json to include Twilio’s regional IP addresses in allowed_addresses. Krisp noise cancellation is enabled by default.
+```console
 lk sip inbound create inbound-trunk.json
-
+```
 Note the SIPTrunkID (e.g., ST_MZFiM5gHr7dH).
 5. Create a Dispatch Rule
-lk sip dispatch create dispatch-rule.json
 
+```console
+lk sip dispatch create dispatch-rule.json
+```
 Note the SIPDispatchRuleID (e.g., SDR_KqLmjGafcBR9).
 6. Link Phone Number
 Associate the phone number with the SIP trunk in your SIP provider’s dashboard (e.g., Twilio).
@@ -143,16 +158,19 @@ We welcome contributions! To contribute:
 Fork the repository.
 
 Create a feature branch:
+```console
 git checkout -b feature/your-feature
-
+```
 
 Commit changes:
+```console
 git commit -m "Add your feature"
-
+```
 
 Push to the branch:
+```console
 git push origin feature/your-feature
-
+```
 
 Open a pull request.
 
